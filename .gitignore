@@ -25,10 +25,6 @@ yolov5/runs/
 yolov5/exp*/  # YOLOv5 experiment directories
 yolov5/weights/
 
-# TFLite model files
-/models/*.tflite
-/models/*.pt
-
 # Jupyter Notebook checkpoints
 .ipynb_checkpoints/
 
