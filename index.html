@@ -1,0 +1,1131 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>
+            Disoriza - AI Rice Disease Detection App | Instant Crop Diagnosis
+        </title>
+
+        <!-- SEO Meta Tags -->
+        <meta
+            name="description"
+            content="Disoriza is an AI-powered mobile app for instant rice disease detection. Identify bacterial leaf blight, brown spot, leaf blast, and more with 98.4% accuracy. Protect your harvest with precision agriculture technology."
+        />
+        <meta
+            name="keywords"
+            content="rice disease detection, AI agriculture, crop disease diagnosis, rice leaf disease, bacterial leaf blight, brown spot, leaf blast, smart farming, precision agriculture, plant pathology app"
+        />
+        <meta name="author" content="Disoriza Labs" />
+        <meta name="robots" content="index, follow" />
+        <meta name="theme-color" content="#10b981" />
+
+        <!-- Open Graph / Facebook -->
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://disoriza.naufal.work/" />
+        <meta
+            property="og:title"
+            content="Disoriza - AI Rice Disease Detection App"
+        />
+        <meta
+            property="og:description"
+            content="AI-powered pathology detection for rice ecosystems. Instant analysis with 98.4% accuracy. Download now on Google Play."
+        />
+        <meta
+            property="og:image"
+            content="https://disoriza.naufal.work/static/og-image.jpg"
+        />
+        <meta property="og:site_name" content="Disoriza" />
+        <meta property="og:locale" content="en_US" />
+
+        <!-- Twitter Card -->
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:url" content="https://disoriza.naufal.work/" />
+        <meta
+            name="twitter:title"
+            content="Disoriza - AI Rice Disease Detection App"
+        />
+        <meta
+            name="twitter:description"
+            content="AI-powered pathology detection for rice ecosystems. Instant analysis with 98.4% accuracy."
+        />
+        <meta
+            name="twitter:image"
+            content="https://disoriza.naufal.work/static/og-image.jpg"
+        />
+
+        <!-- Canonical URL -->
+        <link rel="canonical" href="https://disoriza.naufal.work/" />
+
+        <!-- Favicon -->
+        <link rel="icon" type="image/svg+xml" href="/static/favicon.svg" />
+        <link
+            rel="apple-touch-icon"
+            sizes="180x180"
+            href="/static/apple-touch-icon.png"
+        />
+
+        <!-- Structured Data (JSON-LD) -->
+        <script type="application/ld+json">
+            {
+                "@context": "https://schema.org",
+                "@type": "SoftwareApplication",
+                "name": "Disoriza",
+                "applicationCategory": "UtilitiesApplication",
+                "operatingSystem": "Android",
+                "description": "AI-powered rice disease detection app with 98.4% accuracy. Instantly identify bacterial leaf blight, brown spot, leaf blast, leaf scald, and narrow brown spot.",
+                "url": "https://disoriza.naufal.work/",
+                "downloadUrl": "https://play.google.com/store/apps/details?id=com.disoriza.app",
+                "author": {
+                    "@type": "Organization",
+                    "name": "Disoriza Labs",
+                    "url": "https://disoriza.naufal.work/"
+                },
+                "offers": {
+                    "@type": "Offer",
+                    "price": "0",
+                    "priceCurrency": "USD"
+                },
+                "aggregateRating": {
+                    "@type": "AggregateRating",
+                    "ratingValue": "4.8",
+                    "ratingCount": "1000"
+                }
+            }
+        </script>
+        <script type="application/ld+json">
+            {
+                "@context": "https://schema.org",
+                "@type": "Organization",
+                "name": "Disoriza Labs",
+                "url": "https://disoriza.naufal.work/",
+                "logo": "https://disoriza.naufal.work/static/logo.png",
+                "sameAs": [
+                    "https://play.google.com/store/apps/details?id=com.disoriza.app"
+                ],
+                "contactPoint": {
+                    "@type": "ContactPoint",
+                    "contactType": "customer service",
+                    "availableLanguage": ["English", "Indonesian"]
+                }
+            }
+        </script>
+
+        <!-- Fonts: Inter Tight (Editorial Precision) + Space Mono (Data) -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,300;0,400;0,500;0,600;0,800;1,300&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap"
+            rel="stylesheet"
+        />
+
+        <!-- Tailwind CSS v3.4 -->
+        <script src="https://cdn.tailwindcss.com"></script>
+
+        <!-- Icons -->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        />
+
+        <script>
+            tailwind.config = {
+                theme: {
+                    extend: {
+                        colors: {
+                            brand: {
+                                black: "#09090b", // Zinc 950
+                                white: "#FAFAFA", // Clinical Off-White
+                                gray: "#71717a", // Zinc 500
+                                accent: "#10b981", // Emerald 500 (Bio-Data)
+                                surface: "#f4f4f5", // Zinc 100
+                            },
+                        },
+                        fontFamily: {
+                            sans: ['"Inter Tight"', "sans-serif"],
+                            mono: ['"Space Mono"', "monospace"],
+                        },
+                        backgroundImage: {
+                            "grid-pattern":
+                                "linear-gradient(to right, #e4e4e7 1px, transparent 1px), linear-gradient(to bottom, #e4e4e7 1px, transparent 1px)",
+                        },
+                        animation: {
+                            "scan-down": "scan 3s ease-in-out infinite",
+                            "pulse-slow":
+                                "pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite",
+                            float: "float 6s ease-in-out infinite",
+                        },
+                        keyframes: {
+                            scan: {
+                                "0%, 100%": { top: "0%", opacity: "0" },
+                                "10%": { opacity: "1" },
+                                "90%": { opacity: "1" },
+                                "100%": { top: "100%", opacity: "0" },
+                            },
+                            float: {
+                                "0%, 100%": { transform: "translateY(0)" },
+                                "50%": { transform: "translateY(-20px)" },
+                            },
+                        },
+                    },
+                },
+            };
+        </script>
+
+        <style>
+            /* Custom Utilities for "Lyfe" Style */
+            body {
+                background-color: #fafafa;
+                color: #09090b;
+                -webkit-font-smoothing: antialiased;
+            }
+
+            /* Hide Scrollbar for clean UI */
+            .no-scrollbar::-webkit-scrollbar {
+                display: none;
+            }
+            .no-scrollbar {
+                -ms-overflow-style: none;
+                scrollbar-width: none;
+            }
+
+            /* The "Blur-In" Reveal Effect */
+            .reveal-text {
+                opacity: 0;
+                filter: blur(10px);
+                transform: translateY(20px);
+                transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
+            }
+            .reveal-text.active {
+                opacity: 1;
+                filter: blur(0);
+                transform: translateY(0);
+            }
+
+            /* Stagger delays */
+            .delay-100 {
+                transition-delay: 100ms;
+            }
+            .delay-200 {
+                transition-delay: 200ms;
+            }
+            .delay-300 {
+                transition-delay: 300ms;
+            }
+
+            /* Glassmorphism */
+            .glass-panel {
+                background: rgba(255, 255, 255, 0.7);
+                backdrop-filter: blur(12px);
+                -webkit-backdrop-filter: blur(12px);
+                border: 1px solid rgba(0, 0, 0, 0.05);
+            }
+
+            /* Leaf Masking for Hero */
+            .leaf-container {
+                position: relative;
+                overflow: hidden;
+                border-radius: 999px 100px 999px 100px; /* Organic leaf shape */
+            }
+        </style>
+    </head>
+    <body
+        class="overflow-x-hidden selection:bg-brand-accent selection:text-white"
+    >
+        <a
+            href="#main-content"
+            class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-brand-accent text-white px-4 py-2 rounded-full z-[100]"
+            >Skip to main content</a
+        >
+
+        <!-- NAVIGATION: Invisible UI -->
+        <header>
+            <nav
+                class="fixed top-0 w-full z-50 transition-all duration-300 py-6"
+                id="navbar"
+                aria-label="Main navigation"
+            >
+                <div
+                    class="max-w-7xl mx-auto px-6 flex justify-between items-center"
+                >
+                    <a
+                        href="#"
+                        class="text-xl font-bold tracking-tighter mix-blend-difference z-50"
+                    >
+                        DISORIZA<span class="text-brand-accent">.</span>LAB
+                    </a>
+
+                    <div
+                        class="hidden md:flex gap-8 text-sm font-medium tracking-tight mix-blend-difference z-50"
+                    >
+                        <a
+                            href="#process"
+                            class="hover:text-brand-gray transition-colors"
+                            >Methodology</a
+                        >
+                        <a
+                            href="#database"
+                            class="hover:text-brand-gray transition-colors"
+                            >Database</a
+                        >
+                        <a
+                            href="#team"
+                            class="hover:text-brand-gray transition-colors"
+                            >Research</a
+                        >
+                    </div>
+
+                    <a
+                        href="https://play.google.com/store/apps/details?id=com.disoriza.app"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="Download Disoriza app on Google Play"
+                        class="group relative px-6 py-2.5 bg-brand-black text-white rounded-full overflow-hidden flex items-center gap-2 text-sm font-medium hover:scale-105 transition-transform"
+                    >
+                        <span class="relative z-10">Get App</span>
+                        <i
+                            class="fa-brands fa-google-play relative z-10 text-xs"
+                        ></i>
+                        <div
+                            class="absolute inset-0 bg-brand-accent transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300"
+                        ></div>
+                    </a>
+                </div>
+            </nav>
+        </header>
+
+        <main id="main-content">
+            <!-- HERO SECTION: The Diagnosis Engine -->
+            <section
+                class="relative h-screen flex flex-col items-center justify-center pt-20 overflow-hidden"
+            >
+                <!-- Subtle Grid Background -->
+                <div
+                    class="absolute inset-0 bg-grid-pattern bg-[length:40px_40px] opacity-[0.03] pointer-events-none"
+                ></div>
+
+                <div class="container mx-auto px-6 text-center z-10 relative">
+                    <!-- Badge -->
+                    <div
+                        class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-brand-black/10 bg-white/50 mb-8 reveal-text"
+                    >
+                        <span
+                            class="w-2 h-2 rounded-full bg-brand-accent animate-pulse"
+                        ></span>
+                        <span
+                            class="text-xs font-mono uppercase tracking-widest text-brand-gray"
+                            >Bio-Intelligence v2.0 Live</span
+                        >
+                    </div>
+
+                    <!-- Headline -->
+                    <h1
+                        class="text-6xl md:text-8xl lg:text-9xl font-bold tracking-tighter leading-[0.9] mb-8 text-brand-black"
+                    >
+                        <span class="block reveal-text delay-100">PROTECT</span>
+                        <span class="block reveal-text delay-200"
+                            >THE HARVEST</span
+                        >
+                    </h1>
+
+                    <!-- Subhead -->
+                    <p
+                        class="max-w-xl mx-auto text-lg md:text-xl text-brand-gray font-light leading-relaxed mb-12 reveal-text delay-300"
+                    >
+                        AI-powered pathology detection for rice ecosystems.
+                        <br />
+                        Instant analysis. Precision treatment. <br />
+                        <span
+                            class="font-mono text-xs text-brand-accent mt-2 block"
+                            >Accuracy: 98.4%</span
+                        >
+                    </p>
+
+                    <!-- Visual: The Digital Leaf -->
+                    <div
+                        class="relative w-64 h-80 md:w-80 md:h-96 mx-auto mt-8 reveal-text delay-300 animate-float"
+                    >
+                        <!-- Leaf Image Container -->
+                        <div
+                            class="leaf-container w-full h-full relative shadow-2xl shadow-brand-accent/20"
+                        >
+                            <img
+                                src="https://plantwiseplusknowledgebank.org/cms/asset/4a9469f2-5e9e-4ebc-a564-7631f4b020d1/white-leaf-streak-of-rice-global-eng-1.jpg"
+                                alt="Rice leaf with disease symptoms being analyzed by Disoriza AI detection system"
+                                class="w-full h-full object-cover grayscale-[20%] hover:grayscale-0 transition-all duration-700"
+                                loading="eager"
+                            />
+
+                            <!-- UI Overlay: Scanning Grid -->
+                            <div
+                                class="absolute inset-0 bg-gradient-to-b from-transparent via-brand-accent/10 to-transparent w-full h-[20%] animate-scan-down border-b border-brand-accent/50"
+                            ></div>
+
+                            <!-- Bounding Box UI -->
+                            <div
+                                class="absolute top-1/4 left-1/4 w-1/2 h-1/4 border border-brand-accent/80 rounded-sm opacity-80"
+                            >
+                                <div
+                                    class="absolute -top-3 -right-3 bg-brand-black text-white text-[10px] font-mono px-1 py-0.5"
+                                >
+                                    BLIGHT DETECTED
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Scroll Indicator -->
+                <div
+                    class="absolute bottom-10 left-1/2 transform -translate-x-1/2 text-brand-gray/50 animate-bounce"
+                >
+                    <i class="fa-solid fa-arrow-down-long"></i>
+                </div>
+            </section>
+
+            <!-- PROCESS SECTION: Sticky Laboratory -->
+            <section id="process" class="relative py-32 bg-brand-surface/30">
+                <div class="max-w-7xl mx-auto px-6">
+                    <div class="flex flex-col md:flex-row gap-12">
+                        <!-- Sticky Visual (Right on Desktop, hidden on mobile until scroll) -->
+                        <div
+                            class="hidden md:flex w-full md:w-1/2 md:order-2 md:h-screen sticky top-20 items-center justify-center"
+                        >
+                            <!-- Phone Mockup -->
+                            <div
+                                class="relative w-[300px] h-[600px] bg-brand-black rounded-[40px] shadow-2xl border-4 border-brand-black overflow-hidden ring-1 ring-black/5"
+                            >
+                                <!-- Dynamic Screen Content -->
+                                <div
+                                    id="phone-screen"
+                                    class="absolute inset-0 bg-white w-full h-full transition-all duration-200 ease-out"
+                                    style="will-change: opacity, transform"
+                                >
+                                    <!-- Screen 1: Scan (Default) -->
+                                    <div
+                                        class="screen-content h-full w-full bg-cover bg-center flex flex-col justify-end p-6 relative"
+                                        style="
+                                            background-image: url(&quot;https://images.unsplash.com/photo-1625246333195-58403a7c085c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80&quot;);
+                                        "
+                                    >
+                                        <div
+                                            class="absolute inset-0 bg-black/20"
+                                        ></div>
+                                        <div
+                                            class="relative w-full h-48 border-2 border-white/50 rounded-lg mb-8 flex items-center justify-center"
+                                        >
+                                            <i
+                                                class="fa-solid fa-crop-simple text-white text-4xl opacity-50"
+                                            ></i>
+                                        </div>
+                                        <div
+                                            class="bg-white/90 backdrop-blur rounded-xl p-4 mb-8"
+                                        >
+                                            <div
+                                                class="text-xs font-mono text-gray-500 uppercase"
+                                            >
+                                                Status
+                                            </div>
+                                            <div class="font-bold">
+                                                Scanning Crop...
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Notch -->
+                                <div
+                                    class="absolute top-0 left-1/2 transform -translate-x-1/2 w-32 h-6 bg-brand-black rounded-b-xl z-20"
+                                ></div>
+                            </div>
+                        </div>
+
+                        <!-- Scrolling Text Steps (Left) -->
+                        <div
+                            class="w-full md:w-1/2 md:order-1 flex flex-col justify-center py-10 md:py-20"
+                        >
+                            <!-- Step 1 -->
+                            <div
+                                class="step-trigger min-h-[40vh] md:min-h-[50vh] flex flex-col justify-center opacity-100 md:opacity-30 transition-opacity duration-500 md:hover:opacity-100"
+                                data-step="1"
+                            >
+                                <span
+                                    class="font-mono text-brand-accent text-sm mb-4"
+                                    >01. INPUT</span
+                                >
+                                <h2
+                                    class="text-3xl md:text-5xl font-bold tracking-tight mb-4"
+                                >
+                                    Optical<br />Acquisition
+                                </h2>
+                                <p
+                                    class="text-base md:text-lg text-brand-gray font-light"
+                                >
+                                    Disoriza utilizes the device camera to
+                                    capture high-resolution macro imagery of the
+                                    paddy leaf surface, specifically targeting
+                                    discoloration patterns.
+                                </p>
+                                <!-- Mobile Phone Mockup -->
+                                <div class="md:hidden mt-8 flex justify-center">
+                                    <div
+                                        class="relative w-[200px] h-[400px] bg-brand-black rounded-[30px] shadow-xl border-4 border-brand-black overflow-hidden"
+                                    >
+                                        <div
+                                            id="phone-screen-mobile-1"
+                                            class="absolute inset-0 bg-white w-full h-full"
+                                        ></div>
+                                        <div
+                                            class="absolute top-0 left-1/2 transform -translate-x-1/2 w-24 h-5 bg-brand-black rounded-b-xl z-20"
+                                        ></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Step 2 -->
+                            <div
+                                class="step-trigger min-h-[40vh] md:min-h-[50vh] flex flex-col justify-center opacity-100 md:opacity-30 transition-opacity duration-500 md:hover:opacity-100"
+                                data-step="2"
+                            >
+                                <span
+                                    class="font-mono text-brand-accent text-sm mb-4"
+                                    >02. PROCESS</span
+                                >
+                                <h2
+                                    class="text-3xl md:text-5xl font-bold tracking-tight mb-4"
+                                >
+                                    Neural<br />Inference
+                                </h2>
+                                <p
+                                    class="text-base md:text-lg text-brand-gray font-light"
+                                >
+                                    The image is processed locally via a CNN
+                                    (Convolutional Neural Network) trained on
+                                    50,000+ pathological samples to identify
+                                    microscopic anomalies.
+                                </p>
+                                <!-- Mobile Phone Mockup -->
+                                <div class="md:hidden mt-8 flex justify-center">
+                                    <div
+                                        class="relative w-[200px] h-[400px] bg-brand-black rounded-[30px] shadow-xl border-4 border-brand-black overflow-hidden"
+                                    >
+                                        <div
+                                            id="phone-screen-mobile-2"
+                                            class="absolute inset-0 bg-white w-full h-full"
+                                        ></div>
+                                        <div
+                                            class="absolute top-0 left-1/2 transform -translate-x-1/2 w-24 h-5 bg-brand-black rounded-b-xl z-20"
+                                        ></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Step 3 -->
+                            <div
+                                class="step-trigger min-h-[40vh] md:min-h-[50vh] flex flex-col justify-center opacity-100 md:opacity-30 transition-opacity duration-500 md:hover:opacity-100"
+                                data-step="3"
+                            >
+                                <span
+                                    class="font-mono text-brand-accent text-sm mb-4"
+                                    >03. RESULT</span
+                                >
+                                <h2
+                                    class="text-3xl md:text-5xl font-bold tracking-tight mb-4"
+                                >
+                                    Actionable<br />Protocol
+                                </h2>
+                                <p
+                                    class="text-base md:text-lg text-brand-gray font-light"
+                                >
+                                    Instant diagnosis (e.g., Brown Spot)
+                                    accompanied by specific treatment protocols
+                                    and chemical dosage recommendations.
+                                </p>
+                                <!-- Mobile Phone Mockup -->
+                                <div class="md:hidden mt-8 flex justify-center">
+                                    <div
+                                        class="relative w-[200px] h-[400px] bg-brand-black rounded-[30px] shadow-xl border-4 border-brand-black overflow-hidden"
+                                    >
+                                        <div
+                                            id="phone-screen-mobile-3"
+                                            class="absolute inset-0 bg-white w-full h-full"
+                                        ></div>
+                                        <div
+                                            class="absolute top-0 left-1/2 transform -translate-x-1/2 w-24 h-5 bg-brand-black rounded-b-xl z-20"
+                                        ></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- DATABASE SECTION: Bento Grid -->
+            <section id="database" class="py-32 bg-white relative">
+                <div class="max-w-7xl mx-auto px-6">
+                    <div class="mb-20">
+                        <h2
+                            class="text-4xl md:text-6xl font-bold tracking-tight mb-6 reveal-text"
+                        >
+                            Pathology Database
+                        </h2>
+                        <div class="h-px w-24 bg-brand-black"></div>
+                    </div>
+
+                    <div
+                        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+                    >
+                        <!-- Card 1: Bacterial Leaf Blight -->
+                        <div
+                            class="glass-panel p-6 rounded-2xl hover:border-brand-accent/50 transition-all duration-300 group cursor-pointer reveal-text delay-100"
+                        >
+                            <div class="flex justify-between items-start mb-12">
+                                <div
+                                    class="w-12 h-12 rounded-full bg-yellow-100 flex items-center justify-center text-yellow-600"
+                                >
+                                    <i class="fa-solid fa-biohazard"></i>
+                                </div>
+                                <span
+                                    class="font-mono text-xs border border-gray-200 px-2 py-1 rounded"
+                                    >LIVE</span
+                                >
+                            </div>
+                            <h3 class="text-xl font-bold mb-2">
+                                Bacterial Leaf Blight
+                            </h3>
+                            <p class="text-sm text-brand-gray mb-6">
+                                Wilting of seedlings and yellowing of leaves.
+                            </p>
+                            <div
+                                class="flex items-center gap-2 text-sm font-medium group-hover:gap-4 transition-all"
+                            >
+                                View Protocol
+                                <i class="fa-solid fa-arrow-right text-xs"></i>
+                            </div>
+                        </div>
+
+                        <!-- Card 2: Brown Spot -->
+                        <div
+                            class="glass-panel p-6 rounded-2xl hover:border-brand-accent/50 transition-all duration-300 group cursor-pointer reveal-text delay-100"
+                        >
+                            <div class="flex justify-between items-start mb-12">
+                                <div
+                                    class="w-12 h-12 rounded-full bg-orange-100 flex items-center justify-center text-orange-600"
+                                >
+                                    <i class="fa-solid fa-virus"></i>
+                                </div>
+                                <span
+                                    class="font-mono text-xs border border-gray-200 px-2 py-1 rounded"
+                                    >LIVE</span
+                                >
+                            </div>
+                            <h3 class="text-xl font-bold mb-2">Brown Spot</h3>
+                            <p class="text-sm text-brand-gray mb-6">
+                                Fungal infection causing oval reddish-brown
+                                spots.
+                            </p>
+                            <div
+                                class="flex items-center gap-2 text-sm font-medium group-hover:gap-4 transition-all"
+                            >
+                                View Protocol
+                                <i class="fa-solid fa-arrow-right text-xs"></i>
+                            </div>
+                        </div>
+
+                        <!-- Card 3: Leaf Blast -->
+                        <div
+                            class="glass-panel p-6 rounded-2xl hover:border-brand-accent/50 transition-all duration-300 group cursor-pointer reveal-text delay-200"
+                        >
+                            <div class="flex justify-between items-start mb-12">
+                                <div
+                                    class="w-12 h-12 rounded-full bg-red-100 flex items-center justify-center text-red-600"
+                                >
+                                    <i
+                                        class="fa-solid fa-fire-flame-simple"
+                                    ></i>
+                                </div>
+                                <span
+                                    class="font-mono text-xs border border-gray-200 px-2 py-1 rounded"
+                                    >LIVE</span
+                                >
+                            </div>
+                            <h3 class="text-xl font-bold mb-2">Leaf Blast</h3>
+                            <p class="text-sm text-brand-gray mb-6">
+                                Spindle-shaped lesions affecting nodes and
+                                panicles.
+                            </p>
+                            <div
+                                class="flex items-center gap-2 text-sm font-medium group-hover:gap-4 transition-all"
+                            >
+                                View Protocol
+                                <i class="fa-solid fa-arrow-right text-xs"></i>
+                            </div>
+                        </div>
+
+                        <!-- Card 4: Leaf Scald -->
+                        <div
+                            class="glass-panel p-6 rounded-2xl hover:border-brand-accent/50 transition-all duration-300 group cursor-pointer reveal-text delay-200"
+                        >
+                            <div class="flex justify-between items-start mb-12">
+                                <div
+                                    class="w-12 h-12 rounded-full bg-amber-100 flex items-center justify-center text-amber-600"
+                                >
+                                    <i class="fa-solid fa-sun"></i>
+                                </div>
+                                <span
+                                    class="font-mono text-xs border border-gray-200 px-2 py-1 rounded"
+                                    >LIVE</span
+                                >
+                            </div>
+                            <h3 class="text-xl font-bold mb-2">Leaf Scald</h3>
+                            <p class="text-sm text-brand-gray mb-6">
+                                Zonate lesions with tan centers and brown
+                                margins.
+                            </p>
+                            <div
+                                class="flex items-center gap-2 text-sm font-medium group-hover:gap-4 transition-all"
+                            >
+                                View Protocol
+                                <i class="fa-solid fa-arrow-right text-xs"></i>
+                            </div>
+                        </div>
+
+                        <!-- Card 5: Narrow Brown Spot -->
+                        <div
+                            class="glass-panel p-6 rounded-2xl hover:border-brand-accent/50 transition-all duration-300 group cursor-pointer reveal-text delay-300"
+                        >
+                            <div class="flex justify-between items-start mb-12">
+                                <div
+                                    class="w-12 h-12 rounded-full bg-stone-100 flex items-center justify-center text-stone-600"
+                                >
+                                    <i class="fa-solid fa-leaf"></i>
+                                </div>
+                                <span
+                                    class="font-mono text-xs border border-gray-200 px-2 py-1 rounded"
+                                    >LIVE</span
+                                >
+                            </div>
+                            <h3 class="text-xl font-bold mb-2">
+                                Narrow Brown Spot
+                            </h3>
+                            <p class="text-sm text-brand-gray mb-6">
+                                Linear brown lesions on leaves and leaf sheaths.
+                            </p>
+                            <div
+                                class="flex items-center gap-2 text-sm font-medium group-hover:gap-4 transition-all"
+                            >
+                                View Protocol
+                                <i class="fa-solid fa-arrow-right text-xs"></i>
+                            </div>
+                        </div>
+
+                        <!-- Card 6: Healthy -->
+                        <div
+                            class="glass-panel p-6 rounded-2xl bg-brand-accent/5 hover:border-brand-accent transition-all duration-300 group cursor-pointer reveal-text delay-300"
+                        >
+                            <div class="flex justify-between items-start mb-12">
+                                <div
+                                    class="w-12 h-12 rounded-full bg-brand-accent/20 flex items-center justify-center text-brand-accent"
+                                >
+                                    <i class="fa-solid fa-check"></i>
+                                </div>
+                                <span
+                                    class="font-mono text-xs border border-brand-accent/20 px-2 py-1 rounded text-brand-accent"
+                                    >LIVE</span
+                                >
+                            </div>
+                            <h3 class="text-xl font-bold mb-2">Healthy</h3>
+                            <p class="text-sm text-brand-gray mb-6">
+                                Standard verification for non-pathological
+                                samples.
+                            </p>
+                            <div
+                                class="flex items-center gap-2 text-sm font-medium text-brand-accent group-hover:gap-4 transition-all"
+                            >
+                                View Metrics
+                                <i class="fa-solid fa-arrow-right text-xs"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- RESEARCH TEAM SECTION: Editorial Layout -->
+            <section
+                id="team"
+                class="py-32 bg-brand-surface relative overflow-hidden"
+            >
+                <!-- Abstract Map Background -->
+                <div
+                    class="absolute inset-0 opacity-[0.03]"
+                    style="
+                        background-image: radial-gradient(
+                            #000 1px,
+                            transparent 1px
+                        );
+                        background-size: 20px 20px;
+                    "
+                ></div>
+
+                <div class="max-w-7xl mx-auto px-6 relative z-10">
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+                        <div class="md:col-span-1">
+                            <h2
+                                class="text-3xl font-bold tracking-tight mb-4 reveal-text"
+                            >
+                                Research Unit
+                            </h2>
+                            <p class="text-brand-gray reveal-text delay-100">
+                                Developed in Indonesia.<br />
+                                Optimized for Southeast Asian ecosystems.
+                            </p>
+                        </div>
+
+                        <div class="md:col-span-2">
+                            <div class="space-y-8">
+                                <!-- Researchers -->
+                                <div
+                                    class="border-b border-brand-black/10 pb-4 reveal-text delay-100 flex justify-between items-end"
+                                >
+                                    <h3 class="text-2xl font-light">
+                                        Naufal Haidar
+                                    </h3>
+                                    <span
+                                        class="font-mono text-xs text-brand-gray"
+                                        >MOBILE DEVELOPER</span
+                                    >
+                                </div>
+                                <div
+                                    class="border-b border-brand-black/10 pb-4 reveal-text delay-200 flex justify-between items-end"
+                                >
+                                    <h3 class="text-2xl font-light">
+                                        Dhika Wahyu
+                                    </h3>
+                                    <span
+                                        class="font-mono text-xs text-brand-gray"
+                                        >BACKEND DEVELOPER</span
+                                    >
+                                </div>
+                                <div
+                                    class="border-b border-brand-black/10 pb-4 reveal-text delay-300 flex justify-between items-end"
+                                >
+                                    <h3 class="text-2xl font-light">
+                                        Emir Abiyyu
+                                    </h3>
+                                    <span
+                                        class="font-mono text-xs text-brand-gray"
+                                        >UI/UX DESIGNER</span
+                                    >
+                                </div>
+                                <div
+                                    class="border-b border-brand-black/10 pb-4 reveal-text delay-300 flex justify-between items-end"
+                                >
+                                    <h3 class="text-2xl font-light">
+                                        Ihza Al-Baihaqi
+                                    </h3>
+                                    <span
+                                        class="font-mono text-xs text-brand-gray"
+                                        >ML ENGINEER</span
+                                    >
+                                </div>
+                                <div
+                                    class="border-b border-brand-black/10 pb-4 reveal-text delay-300 flex justify-between items-end"
+                                >
+                                    <h3 class="text-2xl font-light">
+                                        Nadila Amalia
+                                    </h3>
+                                    <span
+                                        class="font-mono text-xs text-brand-gray"
+                                        >PROJECT MANAGER</span
+                                    >
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- FOOTER: High Contrast Conversion -->
+            <footer
+                class="bg-brand-black text-white py-24 relative overflow-hidden"
+            >
+                <div
+                    class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-12"
+                >
+                    <div class="max-w-2xl text-center md:text-left">
+                        <h2
+                            class="text-5xl md:text-7xl font-bold tracking-tighter mb-8 leading-none"
+                        >
+                            EMPOWERING <br />
+                            <span class="text-brand-gray">AGRICULTURE</span>
+                        </h2>
+                        <div
+                            class="flex gap-6 mt-12 text-sm text-brand-gray font-mono"
+                        >
+                            <a
+                                href="#"
+                                class="hover:text-white transition-colors"
+                                >PRIVACY POLICY</a
+                            >
+                            <a
+                                href="#"
+                                class="hover:text-white transition-colors"
+                                >TERMS OF SERVICE</a
+                            >
+                            <a
+                                href="#"
+                                class="hover:text-white transition-colors"
+                                >CONTACT LAB</a
+                            >
+                        </div>
+                        <p class="mt-12 text-xs text-brand-gray/50">
+                            © 2025 DISORIZA LABS. ALL RIGHTS RESERVED.
+                        </p>
+                    </div>
+
+                    <!-- Download -->
+                    <div class="flex flex-col items-center md:items-end gap-6">
+                        <a
+                            href="https://play.google.com/store/apps/details?id=com.disoriza.app"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="Download Disoriza app on Google Play"
+                            class="flex items-center gap-3 border border-white/20 px-6 py-3 rounded-full hover:bg-white hover:text-black transition-all duration-300"
+                        >
+                            <i
+                                class="fa-brands fa-google-play text-xl"
+                                aria-hidden="true"
+                            ></i>
+                            <div class="text-left">
+                                <div
+                                    class="text-[10px] uppercase tracking-widest opacity-60"
+                                >
+                                    Get it on
+                                </div>
+                                <div class="text-sm font-bold">Google Play</div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </footer>
+        </main>
+
+        <!-- JAVASCRIPT: Logic for Animations -->
+        <script>
+            // 1. Reveal Elements on Scroll
+            const observerOptions = {
+                root: null,
+                rootMargin: "0px",
+                threshold: 0.1,
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("active");
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll(".reveal-text").forEach((el) => {
+                observer.observe(el);
+            });
+
+            // 2. Process Section Sticky Logic
+            const stepTriggers = document.querySelectorAll(".step-trigger");
+            const phoneScreen = document.getElementById("phone-screen");
+
+            // Define screens for the mockup
+            const screens = {
+                1: `<div class="h-full w-full bg-cover bg-center flex flex-col justify-end p-6 relative" style="background-image: url('https://images.unsplash.com/photo-1625246333195-58403a7c085c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');">
+                    <div class="absolute inset-0 bg-black/20"></div>
+                    <div class="relative w-full h-48 border-2 border-white/50 rounded-lg mb-8 flex items-center justify-center animate-pulse">
+                        <i class="fa-solid fa-crop-simple text-white text-4xl opacity-50"></i>
+                    </div>
+                    <div class="bg-white/90 backdrop-blur rounded-xl p-4 mb-8">
+                        <div class="text-xs font-mono text-gray-500 uppercase">Step 01</div>
+                        <div class="font-bold">Align Leaf</div>
+                    </div>
+                </div>`,
+                2: `<div class="h-full w-full bg-brand-black p-6 flex flex-col items-center justify-center relative overflow-hidden">
+                    <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1599940824399-b87987ced72a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80')] opacity-20 bg-cover"></div>
+                    <div class="w-full h-2 bg-gray-800 rounded-full mb-4 overflow-hidden">
+                        <div class="h-full bg-brand-accent animate-[width_2s_ease-in-out_infinite]" style="width: 80%"></div>
+                    </div>
+                    <div class="text-brand-accent font-mono text-4xl mb-2">98%</div>
+                    <div class="text-white text-sm">CONFIDENCE SCORE</div>
+                </div>`,
+                3: `<div class="h-full w-full bg-white p-6 flex flex-col">
+                    <div class="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center text-orange-600 mb-6 mt-12">
+                        <i class="fa-solid fa-virus"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-2">Brown Spot</h3>
+                    <p class="text-sm text-gray-500 mb-8">Drechslera oryzae detected.</p>
+                    <div class="bg-gray-100 p-4 rounded-lg">
+                        <div class="text-xs font-bold text-gray-400 mb-2">RECOMMENDED ACTION</div>
+                        <div class="text-sm">Apply fungicides (iprobenfos / edifenphos). Improve soil fertilization.</div>
+                    </div>
+                </div>`,
+            };
+
+            // Mobile screen variants (smaller text)
+            const mobileScreens = {
+                1: `<div class="h-full w-full bg-cover bg-center flex flex-col justify-end p-4 relative" style="background-image: url('https://images.unsplash.com/photo-1625246333195-58403a7c085c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');">
+                    <div class="absolute inset-0 bg-black/20"></div>
+                    <div class="relative w-full h-32 border-2 border-white/50 rounded-lg mb-4 flex items-center justify-center">
+                        <i class="fa-solid fa-crop-simple text-white text-2xl opacity-50"></i>
+                    </div>
+                    <div class="bg-white/90 backdrop-blur rounded-lg p-3 mb-4">
+                        <div class="text-[10px] font-mono text-gray-500 uppercase">Step 01</div>
+                        <div class="font-bold text-sm">Align Leaf</div>
+                    </div>
+                </div>`,
+                2: `<div class="h-full w-full bg-brand-black p-4 flex flex-col items-center justify-center relative overflow-hidden">
+                    <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1599940824399-b87987ced72a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80')] opacity-20 bg-cover"></div>
+                    <div class="w-full h-2 bg-gray-800 rounded-full mb-3 overflow-hidden">
+                        <div class="h-full bg-brand-accent" style="width: 80%"></div>
+                    </div>
+                    <div class="text-brand-accent font-mono text-3xl mb-1">98%</div>
+                    <div class="text-white text-xs">CONFIDENCE SCORE</div>
+                </div>`,
+                3: `<div class="h-full w-full bg-white p-4 flex flex-col">
+                    <div class="w-10 h-10 bg-orange-100 rounded-full flex items-center justify-center text-orange-600 mb-4 mt-8">
+                        <i class="fa-solid fa-virus text-sm"></i>
+                    </div>
+                    <h3 class="text-lg font-bold mb-1">Brown Spot</h3>
+                    <p class="text-xs text-gray-500 mb-4">Drechslera oryzae detected.</p>
+                    <div class="bg-gray-100 p-3 rounded-lg">
+                        <div class="text-[10px] font-bold text-gray-400 mb-1">RECOMMENDED ACTION</div>
+                        <div class="text-xs">Apply fungicides. Improve soil fertilization.</div>
+                    </div>
+                </div>`,
+            };
+
+            // Initialize mobile screens
+            for (let i = 1; i <= 3; i++) {
+                const mobileEl = document.getElementById(
+                    `phone-screen-mobile-${i}`,
+                );
+                if (mobileEl) {
+                    mobileEl.innerHTML = mobileScreens[i];
+                }
+            }
+
+            let currentStep = 1;
+            let isTransitioning = false;
+
+            function updateStep(step, animate = true) {
+                if (step === currentStep && animate) return;
+                currentStep = step;
+
+                if (window.innerWidth >= 768) {
+                    stepTriggers.forEach((t) => {
+                        t.style.opacity = "0.3";
+                        t.style.transition = animate
+                            ? "opacity 0.3s ease"
+                            : "none";
+                    });
+                    const activeStep = document.querySelector(
+                        `[data-step="${step}"]`,
+                    );
+                    if (activeStep) {
+                        activeStep.style.opacity = "1";
+                    }
+                }
+
+                if (phoneScreen && !isTransitioning) {
+                    isTransitioning = true;
+                    phoneScreen.style.opacity = animate ? "0" : "1";
+                    phoneScreen.style.transform = animate
+                        ? "scale(0.95)"
+                        : "scale(1)";
+
+                    setTimeout(
+                        () => {
+                            phoneScreen.innerHTML = screens[step];
+                            phoneScreen.style.opacity = "1";
+                            phoneScreen.style.transform = "scale(1)";
+                            isTransitioning = false;
+                        },
+                        animate ? 150 : 0,
+                    );
+                }
+            }
+
+            function findActiveStep() {
+                const viewportCenter = window.innerHeight / 2;
+                let bestStep = 1;
+                let bestDistance = Infinity;
+
+                stepTriggers.forEach((trigger) => {
+                    const rect = trigger.getBoundingClientRect();
+                    const elementCenter = rect.top + rect.height / 2;
+                    const distance = Math.abs(elementCenter - viewportCenter);
+
+                    if (distance < bestDistance) {
+                        bestDistance = distance;
+                        bestStep = parseInt(trigger.dataset.step);
+                    }
+                });
+
+                return bestStep;
+            }
+
+            let scrollTimeout;
+            function handleScroll() {
+                clearTimeout(scrollTimeout);
+                scrollTimeout = setTimeout(() => {
+                    const step = findActiveStep();
+                    updateStep(step);
+                }, 16);
+            }
+
+            const processSection = document.getElementById("process");
+            const processSectionObserver = new IntersectionObserver(
+                (entries) => {
+                    entries.forEach((entry) => {
+                        if (entry.isIntersecting) {
+                            window.addEventListener("scroll", handleScroll, {
+                                passive: true,
+                            });
+                            handleScroll();
+                        } else {
+                            window.removeEventListener("scroll", handleScroll);
+                        }
+                    });
+                },
+                { threshold: 0 },
+            );
+            processSectionObserver.observe(processSection);
+
+            window.addEventListener("resize", () => {
+                const step = findActiveStep();
+                updateStep(step, false);
+            });
+
+            updateStep(1, false);
+
+            // 3. Navbar Scroll Effect
+            const navbar = document.getElementById("navbar");
+            window.addEventListener("scroll", () => {
+                if (window.scrollY > 20) {
+                    navbar.classList.add(
+                        "bg-white/80",
+                        "backdrop-blur-md",
+                        "shadow-sm",
+                        "py-4",
+                    );
+                    navbar.classList.remove("py-6");
+                } else {
+                    navbar.classList.remove(
+                        "bg-white/80",
+                        "backdrop-blur-md",
+                        "shadow-sm",
+                        "py-4",
+                    );
+                    navbar.classList.add("py-6");
+                }
+            });
+        </script>
+    </body>
+</html>

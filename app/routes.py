@@ -1,10 +1,14 @@
-from flask import Blueprint, request, jsonify
+from flask import Blueprint, request, jsonify, send_file
 from .yolov5_model import detect_padi
 from .cnn_model import classify_disease
 import os
 import shutil
 
 bp = Blueprint('routes', __name__)
+
+@bp.route('/')
+def index():
+    return send_file('../index.html')
 
 def clean_folders(folders):
     """
