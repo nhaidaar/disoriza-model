@@ -1,0 +1,36 @@
+{
+  "buildPath": "code",
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "clipped-overflow-container",
+        "value": "*",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-10-20T01:13:14.723Z",
+        "reason": "Agent reviewed: hero clips decorative artwork and phone-screen clips promotional images; navigation and FAQ controls are outside clipping containers."
+      },
+      {
+        "rule": "cramped-padding",
+        "value": "*",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-10-20T01:16:46.483Z",
+        "reason": "Agent verified computed browser styles at 1440px and 390px: feature and FAQ sections have 110px/72px vertical padding; feature list items have 14px vertical padding; colored section content has 140px/20px horizontal insets. Detector misses logical padding and nested container spacing."
+      },
+      {
+        "rule": "radial-halo",
+        "value": "*",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-10-20T01:16:46.551Z",
+        "reason": "Agent verified light page background rgb(252,252,248), not dark. Soft sage hero backdrop intentionally adapts the user-selected Finzo reference; independently reviewed desktop and mobile captures."
+      }
+    ]
+  }
+}

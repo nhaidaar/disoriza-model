@@ -1,0 +1,154 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-20T01:16:00.165968+00:00",
+  "title": "Design System: Disoriza",
+  "extensions": {
+    "colorMeta": {
+      "ink": {
+        "role": "neutral",
+        "displayName": "Ink"
+      },
+      "green": {
+        "role": "primary",
+        "displayName": "Green"
+      },
+      "muted": {
+        "role": "neutral",
+        "displayName": "Muted"
+      },
+      "paper": {
+        "role": "neutral",
+        "displayName": "Paper"
+      },
+      "sage": {
+        "role": "neutral",
+        "displayName": "Sage"
+      },
+      "lime": {
+        "role": "neutral",
+        "displayName": "Lime"
+      },
+      "line": {
+        "role": "neutral",
+        "displayName": "Line"
+      }
+    },
+    "shadows": [
+      {
+        "name": "shadow",
+        "value": "0 18px 50px #00000018",
+        "purpose": "Leaf photo card."
+      },
+      {
+        "name": "phone",
+        "value": "0 28px 58px #00000026",
+        "purpose": "App screenshot shell."
+      }
+    ],
+    "motion": [
+      {
+        "name": "showcase-sequence",
+        "value": "650ms / 760ms / 600ms cubic-bezier(0.16, 1, 0.3, 1)",
+        "purpose": "Leaf, phone and supporting copy enter once, with 0/90/200ms delays."
+      },
+      {
+        "name": "button-transition",
+        "value": "background 180ms ease, border-color 180ms ease",
+        "purpose": "Stable button feedback; secondary link arrows translate 3px over 220ms."
+      },
+      {
+        "name": "faq-transition",
+        "value": "360ms open / 280ms close cubic-bezier(0.22, 1, 0.36, 1)",
+        "purpose": "Native disclosure height enhanced with interruptible Web Animations; immediate under reduced motion."
+      },
+      {
+        "name": "mobile-menu-transition",
+        "value": "240ms open / 180ms close cubic-bezier(0.22, 1, 0.36, 1)",
+        "purpose": "Menu opacity and short vertical travel; native fallback without scripts."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "wide-min",
+        "value": "1600px"
+      },
+      {
+        "name": "tablet-max",
+        "value": "900px"
+      },
+      {
+        "name": "mobile-max",
+        "value": "700px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Google Play action.",
+      "html": "<a class=\"ds-button\" href=\"https://play.google.com/store/apps/details?id=com.disoriza.app\"><img src=\"/static/google-play.svg\" width=\"24\" height=\"24\" alt=\"\">Unduh di Google Play</a>",
+      "css": ".ds-button {display: inline-flex; justify-content: center; align-items: center; gap: 12px; min-height: 52px; padding: 13px 24px; background: var(--green); color: white; border-radius: 999px; font-size: 14px; font-weight: 600; transition: background 180ms ease, border-color 180ms ease;}\n.ds-button:hover {background: #245c4c;}\n.ds-button.ds-secondary {background: transparent; color: var(--green); border: 1px solid #bccaba;}\n.ds-button.ds-secondary:hover {background: var(--sage);}\n.ds-button.ds-light {background: var(--lime); color: var(--green);}\n.ds-button.ds-light:hover {background: #e3f3bc;}\n.ds-button { font-family: DM Sans, sans-serif; line-height: 1.6; text-decoration: none; }\n.ds-button:focus-visible, .ds-nav a:focus-visible, .ds-faq summary:focus-visible { outline: 3px solid #a96712; outline-offset: 6px; }\n@media (max-width: 700px) { .ds-button { font-size: 13px; min-height: 48px; padding: 12px 19px; } }\n@media (prefers-reduced-motion: reduce) { .ds-button { transition: none; } }"
+    },
+    {
+      "name": "Secondary button",
+      "kind": "button",
+      "refersTo": "button-secondary",
+      "description": "In-page process link.",
+      "html": "<a class=\"ds-button ds-secondary\" href=\"#process\">Lihat cara kerja</a>",
+      "css": ".ds-button {display: inline-flex; justify-content: center; align-items: center; gap: 12px; min-height: 52px; padding: 13px 24px; background: var(--green); color: white; border-radius: 999px; font-size: 14px; font-weight: 600; transition: background 180ms ease, border-color 180ms ease;}\n.ds-button:hover {background: #245c4c;}\n.ds-button.ds-secondary {background: transparent; color: var(--green); border: 1px solid #bccaba;}\n.ds-button.ds-secondary:hover {background: var(--sage);}\n.ds-button.ds-light {background: var(--lime); color: var(--green);}\n.ds-button.ds-light:hover {background: #e3f3bc;}\n.ds-button { font-family: DM Sans, sans-serif; line-height: 1.6; text-decoration: none; }\n.ds-button:focus-visible, .ds-nav a:focus-visible, .ds-faq summary:focus-visible { outline: 3px solid #a96712; outline-offset: 6px; }\n@media (max-width: 700px) { .ds-button { font-size: 13px; min-height: 48px; padding: 12px 19px; } }\n@media (prefers-reduced-motion: reduce) { .ds-button { transition: none; } }"
+    },
+    {
+      "name": "Light button",
+      "kind": "button",
+      "refersTo": "button-light",
+      "description": "Google Play action.",
+      "html": "<a class=\"ds-button ds-light\" href=\"https://play.google.com/store/apps/details?id=com.disoriza.app\"><img src=\"/static/google-play.svg\" width=\"24\" height=\"24\" alt=\"\">Unduh di Google Play</a>",
+      "css": ".ds-button {display: inline-flex; justify-content: center; align-items: center; gap: 12px; min-height: 52px; padding: 13px 24px; background: var(--green); color: white; border-radius: 999px; font-size: 14px; font-weight: 600; transition: background 180ms ease, border-color 180ms ease;}\n.ds-button:hover {background: #245c4c;}\n.ds-button.ds-secondary {background: transparent; color: var(--green); border: 1px solid #bccaba;}\n.ds-button.ds-secondary:hover {background: var(--sage);}\n.ds-button.ds-light {background: var(--lime); color: var(--green);}\n.ds-button.ds-light:hover {background: #e3f3bc;}\n.ds-button { font-family: DM Sans, sans-serif; line-height: 1.6; text-decoration: none; }\n.ds-button:focus-visible, .ds-nav a:focus-visible, .ds-faq summary:focus-visible { outline: 3px solid #a96712; outline-offset: 6px; }\n@media (max-width: 700px) { .ds-button { font-size: 13px; min-height: 48px; padding: 12px 19px; } }\n@media (prefers-reduced-motion: reduce) { .ds-button { transition: none; } }"
+    },
+    {
+      "name": "Desktop navigation",
+      "kind": "nav",
+      "refersTo": "navigation",
+      "description": "Section anchors in the desktop header.",
+      "html": "<nav class=\"ds-nav\" aria-label=\"Navigasi utama\"><a href=\"#process\">Cara kerja</a><a href=\"#features\">Fitur</a><a href=\"#database\">Penyakit padi</a><a href=\"#faq\">FAQ</a></nav>",
+      "css": ".ds-nav {display: flex; align-items: center; gap: 34px; font-size: 14px;} .ds-nav {font-family: DM Sans, sans-serif; color: var(--ink);} .ds-nav a {color: inherit; text-decoration: none;} .ds-nav a:hover {text-decoration: underline;} .ds-button:focus-visible, .ds-nav a:focus-visible, .ds-faq summary:focus-visible { outline: 3px solid #a96712; outline-offset: 6px; }"
+    },
+    {
+      "name": "Step number",
+      "kind": "custom",
+      "refersTo": "step-number",
+      "description": "Number marker for each process step.",
+      "html": "<span class=\"ds-step-number\">1</span>",
+      "css": ".ds-step-number {display: grid; place-items: center; width: 42px; height: 42px; background: var(--sage); border-radius: 50%; font-size: 15px; margin-bottom: 22px;} .ds-step-number {font-family: DM Sans, sans-serif; color: var(--ink);}"
+    },
+    {
+      "name": "FAQ disclosure",
+      "kind": "custom",
+      "refersTo": "faq",
+      "description": "Native keyboard-operable details with a rotating plus icon.",
+      "html": "<div class=\"ds-faq\"><details><summary>Bagaimana cara mulai menggunakan Disoriza?<svg class=\"ds-icon\" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M12 5v14M5 12h14\"/></svg></summary><p>Unduh Disoriza di Google Play, buka aplikasinya, lalu ikuti petunjuk untuk memindai atau mengunggah foto daun padi.</p></details></div>",
+      "css": ".ds-faq details {border-bottom: 1px solid var(--line); padding: 22px 0;}\n.ds-faq summary {cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 24px; font-size: 17px; font-weight: 600; list-style: none; min-height: 30px;}\n.ds-faq summary::-webkit-details-marker {display: none;}\n.ds-faq summary .ds-icon {transition: transform 280ms cubic-bezier(0.16,1,0.3,1);}\n.ds-faq details[open] summary .ds-icon {transform: rotate(45deg);}\n.ds-faq details p {font-size: 15px; padding-top: 15px; max-width: 62ch;} .ds-faq {font-family: DM Sans, sans-serif; color: var(--ink); line-height: 1.6;} .ds-faq p {margin: 0; color: var(--muted);} .ds-icon {width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;flex-shrink:0;} .ds-button:focus-visible, .ds-nav a:focus-visible, .ds-faq summary:focus-visible { outline: 3px solid #a96712; outline-offset: 6px; } @media (prefers-reduced-motion: reduce) {.ds-faq .ds-icon {transition:none;}}"
+    }
+  ],
+  "narrative": {
+    "northStar": "Disoriza’s calm field guide",
+    "overview": "A calm editorial guide for Indonesian rice farmers: generous whitespace, cream and sage surfaces, and Disoriza teal. Large sans-serif headings pair with italic serif emphasis; existing photography and real app screenshots make the product tangible. The user-selected Finzo layout is adapted directly in code while retaining Disoriza’s logo and identity.",
+    "keyCharacteristics": [
+      "Centered headline with italic emphasis.",
+      "Quiet tonal sections with selective artwork shadows.",
+      "Indonesian copy and a clear Google Play action."
+    ],
+    "rules": [],
+    "dos": [
+      "Do retain the existing logo and Indonesian farmer-facing copy.",
+      "Do use real app screenshots and preserve their provenance in static/ASSETS.md.",
+      "Do preserve keyboard focus, the skip link, native disclosures, and reduced-motion behavior."
+    ],
+    "donts": [
+      "Don’t invent accuracy, ratings, adoption, or testimonials.",
+      "Don’t present promotional screenshots as a live analysis result."
+    ]
+  }
+}
